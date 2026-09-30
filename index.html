@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio profesional de Enzo Sander - Desarrollador .NET (C#), ASP.NET, MySQL, PHP y estudiante de programación en UTN.">
+  <meta name="author" content="Enzo Sander">
+  <meta name="theme-color" content="#0C0E12">
+  <title>Enzo Sander | Desarrollador .NET (C#) &amp; Software</title>
+
+  <!-- Tipografía Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos principal -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. MENÚ DE NAVEGACIÓN (Fijo arriba con menú hamburguesa puro CSS)
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="contenedor header-container">
+      <!-- Logotipo / Nombre a la izquierda -->
+      <a href="#inicio" class="logo" aria-label="Ir al inicio - Enzo Sander">
+        <span class="logo-tag">&lt;ES /&gt;</span>
+        <span>Enzo Sander</span>
+      </a>
+
+      <!-- Control del Menú Hamburguesa en móvil (Técnica CSS Checkbox Hack) -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Abrir o cerrar menú de navegación">
+      <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true" title="Menú">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </label>
+
+      <!-- Enlaces de navegación anclados -->
+      <nav class="nav-menu" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="#inicio" class="nav-link">Inicio</a></li>
+          <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+          <li><a href="#conocimientos" class="nav-link">Conocimientos</a></li>
+          <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+          <li><a href="#redes" class="nav-link">Redes</a></li>
+          <li><a href="#contacto" class="nav-btn-contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========================================================================
+         2. PRESENTACIÓN INICIAL CON FOTO (#inicio)
+         ======================================================================== -->
+    <section id="inicio" class="seccion hero-section">
+      <div class="contenedor hero-grid">
+        
+        <!-- Columna de texto e información principal -->
+        <div class="hero-content">
+          <!-- Indicador de estado de disponibilidad -->
+          <div class="status-pill">
+            <span class="status-dot"></span>
+            <span>Disponible para nuevos desafíos</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hola, soy <br>
+            <span class="gradiente-texto">Enzo Sander</span>
+          </h1>
+
+          <h2 class="hero-subtitle">
+            Desarrollador .NET (C#) | Estudiante de Programación en UTN | ASP.NET, MySQL, PHP, Git
+          </h2>
+
+          <p class="hero-phrase">
+            "Programador y estudiante en proceso..."
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#proyectos" class="btn btn-primary">
+              Ver proyectos
+              <svg class="btn-icon" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+
+            <!-- Enlace al CV en PDF con atributo download -->
+            <a href="cv/CV Enzo Sander.pdf" download="CV Enzo Sander.pdf" class="btn btn-secondary">
+              <svg class="btn-icon" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+              Descargar CV
+            </a>
+          </div>
+        </div>
+
+        <!-- Columna de imagen con marco decorativo y halo giratorio continuo -->
+        <div class="hero-image-wrapper">
+          <div class="avatar-container">
+            <!-- Glow sutil de fondo -->
+            <div class="avatar-glow"></div>
+            <!-- Aro giratorio animado con gradiente continuo -->
+            <div class="avatar-rotating-ring"></div>
+
+            <!-- Etiquetas flotantes estilo tech alrededor de la foto -->
+            <span class="avatar-floating-tag avatar-tag-1">C#</span>
+            <span class="avatar-floating-tag avatar-tag-2">.NET</span>
+            <span class="avatar-floating-tag avatar-tag-3">SQL</span>
+
+            <!-- Marco redondeado para la imagen de perfil -->
+            <div class="avatar-inner">
+              <img src="img/foto-perfil.jpg" alt="Foto de perfil de Enzo Sander" class="avatar-img" width="360" height="360">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         3. INFORMACIÓN GENERAL (Sobre mí - #sobre-mi)
+         ======================================================================== -->
+    <section id="sobre-mi" class="seccion about-section">
+      <div class="contenedor">
+        
+        <header class="seccion-header">
+          <span class="seccion-subtitulo">&lt;Perfil Profesional&gt;</span>
+          <h2 class="seccion-titulo">Sobre <span class="texto-acento-2">mí</span></h2>
+          <p class="seccion-descripcion">Conocé un poco más sobre mi trayectoria, formación académica y enfoque de desarrollo.</p>
+        </header>
+
+        <!-- Tarjeta de presentación general -->
+        <article class="about-card">
+          <p class="about-intro-text">
+            Desarrollador de Software en formación (UTN) enfocado en .NET (C#), APIs REST y MySQL.
+          </p>
+          <div class="about-tech-stack">
+            <strong>Tecnologías:</strong> C# | .NET | ASP.NET | WinForms | Git &amp; GitHub | PHP | MySQL
+          </div>
+        </article>
+
+        <!-- Datos rápidos en tarjetas -->
+        <div class="quick-facts-grid">
+          <!-- Ubicación -->
+          <div class="fact-card">
+            <div class="fact-icon-wrapper" aria-hidden="true">
+              <svg class="fact-icon" viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+              </svg>
+            </div>
+            <div class="fact-content">
+              <h4>Ubicación</h4>
+              <p>Rosario - Santa Fe</p>
+            </div>
+          </div>
+
+          <!-- Idiomas -->
+          <div class="fact-card">
+            <div class="fact-icon-wrapper" aria-hidden="true">
+              <svg class="fact-icon" viewBox="0 0 24 24">
+                <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm7.93 9h-3.09a15.42 15.42 0 0 0-1.42-5.06A8.04 8.04 0 0 1 19.93 11zm-5.9 0H9.97a13.3 13.3 0 0 1 1.25-5.04A13.2 13.2 0 0 1 12 5.92a13.2 13.2 0 0 1 .78.04A13.3 13.3 0 0 1 14.03 11zM12 4c.67 0 1.32.1 1.94.27A15.3 15.3 0 0 0 12 2.05a15.3 15.3 0 0 0-1.94 2.22C10.68 4.1 11.33 4 12 4zm-7.93 7a8.04 8.04 0 0 1 4.51-5.06A15.42 15.42 0 0 0 7.16 11H4.07zm0 2h3.09a15.42 15.42 0 0 0 1.42 5.06A8.04 8.04 0 0 1 4.07 13zm5.9 0h4.06a13.3 13.3 0 0 1-1.25 5.04 13.2 13.2 0 0 1-.78.04 13.2 13.2 0 0 1-.78-.04A13.3 13.3 0 0 1 9.97 13zm5.45 5.06A15.42 15.42 0 0 0 16.84 13h3.09a8.04 8.04 0 0 1-4.51 5.06z"/>
+              </svg>
+            </div>
+            <div class="fact-content">
+              <h4>Idiomas</h4>
+              <p>Español e Inglés</p>
+            </div>
+          </div>
+
+          <!-- Educación -->
+          <div class="fact-card">
+            <div class="fact-icon-wrapper" aria-hidden="true">
+              <svg class="fact-icon" viewBox="0 0 24 24">
+                <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 14.38l-7-3.82V17l7 3.82L19 17v-3.44l-7 3.82z"/>
+              </svg>
+            </div>
+            <div class="fact-content">
+              <h4>Educación</h4>
+              <p>Estudiante de Programación en UTN y profesor de ED Física.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline breve de experiencia académica y formativa -->
+        <div class="timeline-card">
+          <h3 class="timeline-title">
+            <span class="texto-acento-1">#</span> Trayectoria y Formación
+          </h3>
+          <div class="timeline-list">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-period">2024 - Actualidad</div>
+              <div class="timeline-role">Tecnicatura Universitaria en Programación (TUP) - UTN FRRo</div>
+              <p class="timeline-desc">
+                Formación intensiva en desarrollo de software: arquitectura en capas, Programación Orientada a Objetos en C#, WinForms, bases de datos relacionales (SQL Server, MySQL), estructuras de datos y desarrollo backend.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-period">Formación Complementaria</div>
+              <div class="timeline-role">Diplomatura Web Fullstack &amp; Profesor de Educación Física</div>
+              <p class="timeline-desc">
+                Desarrollo web con PHP, MySQL, maquetación HTML/CSS/JS y una sólida base en disciplina, trabajo en equipo y liderazgo pedagógico.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         4. CONOCIMIENTOS TÉCNICOS (#conocimientos)
+         (Agrupados por categoría, etiquetas estilizadas, sin barras de porcentaje)
+         ======================================================================== -->
+    <section id="conocimientos" class="seccion skills-section">
+      <div class="contenedor">
+
+        <header class="seccion-header">
+          <span class="seccion-subtitulo">&lt;Stack Tecnológico&gt;</span>
+          <h2 class="seccion-titulo">Mis <span class="texto-acento-1">Conocimientos</span></h2>
+          <p class="seccion-descripcion">
+            Herramientas y lenguajes aplicados en proyectos de escritorio, backend y web.
+          </p>
+        </header>
+
+        <div class="skills-grid">
+
+          <!-- Categoría 1: Backend & .NET -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <svg class="skill-cat-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/>
+              </svg>
+              <h3 class="skill-cat-title">Backend &amp; Ecosistema .NET</h3>
+            </div>
+            <div class="skill-chips-container">
+              <span class="tech-chip tech-chip-accent">
+                <svg class="tech-chip-icon" viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+                C#
+              </span>
+              <span class="tech-chip tech-chip-accent">
+                <svg class="tech-chip-icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+                ASP.NET
+              </span>
+              <span class="tech-chip">
+                <svg class="tech-chip-icon" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 8.5L4 7l8-3.5L20 7l-8 3.5zM2 17l10 5 10-5v-2l-10 5-10-5v2z"/></svg>
+                .NET Core
+              </span>
+              <span class="tech-chip">
+                <svg class="tech-chip-icon" viewBox="0 0 24 24"><path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H5V8h14v10z"/></svg>
+                WinForms
+              </span>
+              <span class="tech-chip">
+                <svg class="tech-chip-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+                APIs REST
+              </span>
+              <span class="tech-chip">
+                <svg class="tech-chip-icon" viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4a1 1 0 0 0 1.41 1.41l1.78-1.78A8.96 8.96 0 0 0 12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9z"/></svg>
+                POO (Arquitectura)
+              </span>
+            </div>
+          </div>
+
+          <!-- Categoría 2: Bases de Datos -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <svg class="skill-cat-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 4.02 2 6.5v11C2 19.98 6.48 22 12 22s10-2.02 10-4.5v-11C22 4.02 17.52 2 12 2zm0 2c4.42 0 8 1.57 8 2.5S16.42 9 12 9 4 7.43 4 6.5 7.58 4 12 4zm0 16c-4.42 0-8-1.57-8-2.5v-2.18c2.09 1.43 5.06 2.18 8 2.18s5.91-.75 8-2.18V17.5c0 .93-3.58 2.5-8 2.5zm0-5c-4.42 0-8-1.57-8-2.5v-2.18c2.09 1.43 5.06 2.18 8 2.18s5.91-.75 8-2.18V12.5c0 .93-3.58 2.5-8 2.5z"/>
+              </svg>
+              <h3 class="skill-cat-title">Bases de Datos</h3>
+            </div>
+            <div class="skill-chips-container">
+              <span class="tech-chip tech-chip-accent">
+                <svg class="tech-chip-icon" viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/></svg>
+                MySQL
+              </span>
+              <span class="tech-chip tech-chip-accent">
+                <svg class="tech-chip-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>
+                SQL Server
+              </span>
+              <span class="tech-chip">
+                <svg class="tech-chip-icon" viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25z"/></svg>
+                Consultas SQL &amp; Joins
+              </span>
+              <span class="tech-chip">
+                <svg class="tech-chip-icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+                Stored Procedures
+              </span>
+            </div>
+          </div>
+
+          <!-- Categoría 3: Frontend & Web -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <svg class="skill-cat-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5A10 10 0 0 0 12 2z"/></svg>
+              <h3 class="skill-cat-title">Frontend &amp; Lenguajes Web</h3>
+            </div>
+            <div class="skill-chips-container">
+              <span class="tech-chip tech-chip-accent">
+                <svg class="tech-chip-icon" viewBox="0 0 24 24"><path d="M12 2L2 5l1.8 14.5L12 22l8.2-2.5L22 5l-10-3z"/></svg>
+                HTML5
+              </span>
+              <span class="tech-chip tech-chip-accent">
+                <svg class="tech-chip-icon" viewBox="0 0 24 24"><path d="M12 2L2 5l1.8 14.5L12 22l8.2-2.5L22 5l-10-3z"/></svg>
+                CSS3 (Flexbox / Grid)
+              </span>
+              <span class="tech-chip">
+                <svg class="tech-chip-icon" viewBox="0 0 24 24"><path d="M3 3h18v18H3V3zm10.72 13.06c.45.78 1.07 1.35 2.05 1.35 1.03 0 1.66-.54 1.66-1.3 0-.91-.73-1.26-1.95-1.79l-.67-.29c-1.92-.81-3.2-1.84-3.2-3.86 0-1.94 1.48-3.41 3.79-3.41 1.63 0 2.8.64 3.56 2.03l-1.84 1.18c-.4-.73-.85-1.04-1.72-1.04-.84 0-1.42.54-1.42 1.19 0 .82.55 1.16 1.76 1.68l.67.29c2.25.97 3.44 1.99 3.44 4.04 0 2.33-1.8 3.59-4.14 3.59-2.31 0-3.72-1.12-4.42-2.57l1.79-1.06z"/></svg>
+                JavaScript
+              </span>
+              <span class="tech-chip tech-chip-accent">
+                <svg class="tech-chip-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>
+                PHP
+              </span>
+              <span class="tech-chip">
+                <svg class="tech-chip-icon" viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/></svg>
+                Responsive Design
+              </span>
+            </div>
+          </div>
+
+          <!-- Categoría 4: Herramientas & Control de Versiones -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <svg class="skill-cat-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.49.49 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54A.48.48 0 0 0 14 2h-4c-.25 0-.46.18-.49.42l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.63 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.08.63-.08.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
+              </svg>
+              <h3 class="skill-cat-title">Herramientas &amp; Entorno</h3>
+            </div>
+            <div class="skill-chips-container">
+              <span class="tech-chip tech-chip-accent">
+                <svg class="tech-chip-icon" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V17a1 1 0 0 1-2 0v-.07A7.003 7.003 0 0 1 5.07 11H5a1 1 0 0 1 0-2h.07A7.003 7.003 0 0 1 11 5.07V5a1 1 0 0 1 2 0v.07A7.003 7.003 0 0 1 18.93 11H19a1 1 0 0 1 0 2h-.07A7.003 7.003 0 0 1 13 16.93z"/></svg>
+                Git
+              </span>
+              <span class="tech-chip">
+                <svg class="tech-chip-icon" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5A10 10 0 0 0 12 2z"/></svg>
+                GitHub
+              </span>
+              <span class="tech-chip">
+                <svg class="tech-chip-icon" viewBox="0 0 24 24"><path d="M17.58 3L22 6.55V17.4L17.58 21 8.8 13.97 4.3 17.5 2 15.65 6.43 12 2 8.35 4.3 6.5 8.8 10.03 17.58 3z"/></svg>
+                Visual Studio &amp; VS Code
+              </span>
+              <span class="tech-chip">
+                <svg class="tech-chip-icon" viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+                Trabajo Colaborativo
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         5. PROYECTOS (#proyectos)
+         (Los tres primeros más grandes como destacados. Incluyen imagen, video,
+          título, descripción corta, rol y botón ver a GitHub en pestaña nueva)
+         ======================================================================== -->
+    <section id="proyectos" class="seccion projects-section">
+      <div class="contenedor">
+
+        <header class="seccion-header">
+          <span class="seccion-subtitulo">&lt;Portafolio de Trabajos&gt;</span>
+          <h2 class="seccion-titulo">Mis <span class="texto-acento-2">Proyectos</span></h2>
+          <p class="seccion-descripcion">
+            Selección de desarrollos integradores, aplicaciones de escritorio y proyectos universitarios.
+          </p>
+        </header>
+
+        <div class="proyectos-wrapper">
+
+          <!-- PROYECTOS DESTACADOS (3 PRIMEROS MÁS GRANDES) -->
+          <div>
+            <h3 class="proyectos-subheading">
+              <span class="texto-acento-1">★</span> Proyectos Destacados
+            </h3>
+
+            <div class="destacados-grid">
+
+              <!-- PROYECTO DESTACADO 1: Catálogo de Artículos -->
+              <article class="proyecto-card-destacado">
+                <!-- Checkbox de control para alternar demo / foto -->
+                <input type="checkbox" id="demo-catalogo" class="demo-toggle" aria-label="Mostrar u ocultar video de demostración para Catálogo de Artículos">
+
+                <div class="proyecto-media-box">
+                  <span class="proyecto-badge-destacado">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    Destacado
+                  </span>
+
+                  <!-- 1. Capa de Imagen (se muestra primero) -->
+                  <div class="media-view-image">
+                    <img src="img/catalogo-articulos.png" alt="Captura de pantalla de la aplicación Catálogo de Artículos en WinForms" class="proyecto-img" loading="lazy">
+                    <label for="demo-catalogo" class="btn-demo-overlay" title="Ver video demostrativo de Catálogo de Artículos">
+                      <svg class="demo-play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                      <span>Ver demo</span>
+                    </label>
+                  </div>
+
+                  <!-- 2. Capa de Video (se muestra al presionar 'Ver demo') -->
+                  <div class="media-view-video">
+                    <video controls preload="metadata" class="proyecto-video" aria-label="Demostración en video del Catálogo de Artículos">
+                      <source src="video/video-catalogo.mp4" type="video/mp4">
+                      Tu navegador no soporta el formato de video.
+                    </video>
+                    <label for="demo-catalogo" class="btn-cerrar-demo" title="Volver a la imagen">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                      <span>Volver a la foto</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="proyecto-body">
+                  <h4 class="proyecto-titulo">Catálogo de Artículos</h4>
+                  <p class="proyecto-desc">
+                    Aplicación de escritorio para la gestión de un catálogo de artículos, desarrollada como trabajo práctico de Programación III (TUP 2026 2C, comisión 121, Equipo L). Permite administrar artículos con sus imágenes, y las marcas y categorías disponibles, con toda la información persistida en SQL Server.
+                  </p>
+
+                  <div class="proyecto-rol-box">
+                    <strong>Mi Rol:</strong> Desarrollador / Colaborador
+                  </div>
+
+                  <div class="proyecto-tags">
+                    <span class="badge-pill">C#</span>
+                    <span class="badge-pill">.NET WinForms</span>
+                    <span class="badge-pill">SQL Server</span>
+                    <span class="badge-pill">Arquitectura en Capas</span>
+                  </div>
+
+                  <div class="proyecto-footer">
+                    <!-- Botón para alternar Ver demo / Volver a foto -->
+                    <label for="demo-catalogo" class="btn btn-demo-action" title="Alternar video demostrativo">
+                      <svg class="btn-icon icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                      <svg class="btn-icon icon-close" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                      <span class="label-text-ver">Ver demo</span>
+                      <span class="label-text-ocultar">Volver a la foto</span>
+                    </label>
+
+                    <a href="https://github.com/ccofee/tp-winform-equipo-L" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                      <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5A10 10 0 0 0 12 2z"/>
+                      </svg>
+                      Ver en GitHub
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- PROYECTO DESTACADO 2: Sistema de Gestión de Reparación -->
+              <article class="proyecto-card-destacado">
+                <!-- Checkbox de control para alternar demo / foto -->
+                <input type="checkbox" id="demo-reparaciones" class="demo-toggle" aria-label="Mostrar u ocultar video de demostración para Sistema de Reparaciones">
+
+                <div class="proyecto-media-box">
+                  <span class="proyecto-badge-destacado">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    Destacado
+                  </span>
+
+                  <!-- 1. Capa de Imagen (se muestra primero) -->
+                  <div class="media-view-image">
+                    <img src="img/sistema-reparaciones.png" alt="Captura de pantalla del Sistema de Gestión de Reparación de Equipamiento Informático" class="proyecto-img" loading="lazy">
+                    <label for="demo-reparaciones" class="btn-demo-overlay" title="Ver video demostrativo de Sistema de Reparaciones">
+                      <svg class="demo-play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                      <span>Ver demo</span>
+                    </label>
+                  </div>
+
+                  <!-- 2. Capa de Video (se muestra al presionar 'Ver demo') -->
+                  <div class="media-view-video">
+                    <video controls preload="metadata" class="proyecto-video" aria-label="Demostración en video del Sistema de Gestión de Reparaciones">
+                      <source src="video/video-reparaciones.mp4" type="video/mp4">
+                      Tu navegador no soporta el formato de video.
+                    </video>
+                    <label for="demo-reparaciones" class="btn-cerrar-demo" title="Volver a la imagen">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                      <span>Volver a la foto</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="proyecto-body">
+                  <h4 class="proyecto-titulo">Sistema de Gestión de Reparación de Equipamiento Informático</h4>
+                  <p class="proyecto-desc">
+                    Este proyecto es una aplicación de consola desarrollada como trabajo integrador para la materia Programación II de la universidad. Su objetivo principal es llevar el control integral de los equipos que ingresan a un local de servicio técnico, las reparaciones realizadas sobre ellos y el personal asignado.
+                  </p>
+
+                  <div class="proyecto-rol-box">
+                    <strong>Mi Rol:</strong> Desarrollador / Colaborador
+                  </div>
+
+                  <div class="proyecto-tags">
+                    <span class="badge-pill">C#</span>
+                    <span class="badge-pill">Consola</span>
+                    <span class="badge-pill">Gestión de Archivos</span>
+                    <span class="badge-pill">Programación Modular</span>
+                  </div>
+
+                  <div class="proyecto-footer">
+                    <!-- Botón para alternar Ver demo / Volver a foto -->
+                    <label for="demo-reparaciones" class="btn btn-demo-action" title="Alternar video demostrativo">
+                      <svg class="btn-icon icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                      <svg class="btn-icon icon-close" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                      <span class="label-text-ver">Ver demo</span>
+                      <span class="label-text-ocultar">Volver a la foto</span>
+                    </label>
+
+                    <a href="https://github.com/enzosanderr/Reparaciones" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                      <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5A10 10 0 0 0 12 2z"/>
+                      </svg>
+                      Ver en GitHub
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- PROYECTO DESTACADO 3: Juego Enfrendados -->
+              <article class="proyecto-card-destacado">
+                <!-- Checkbox de control para alternar demo / foto -->
+                <input type="checkbox" id="demo-enfrendados" class="demo-toggle" aria-label="Mostrar u ocultar video de demostración para Juego Enfrendados">
+
+                <div class="proyecto-media-box">
+                  <span class="proyecto-badge-destacado">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    Destacado
+                  </span>
+
+                  <!-- 1. Capa de Imagen (se muestra primero) -->
+                  <div class="media-view-image">
+                    <img src="img/juego-enfrendados.png" alt="Captura de pantalla del Juego Enfrendados en consola de C#" class="proyecto-img" loading="lazy">
+                    <label for="demo-enfrendados" class="btn-demo-overlay" title="Ver video demostrativo de Juego Enfrendados">
+                      <svg class="demo-play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                      <span>Ver demo</span>
+                    </label>
+                  </div>
+
+                  <!-- 2. Capa de Video (se muestra al presionar 'Ver demo') -->
+                  <div class="media-view-video">
+                    <video controls preload="metadata" class="proyecto-video" aria-label="Demostración en video del Juego Enfrendados">
+                      <source src="video/video-enfrendados.mp4" type="video/mp4">
+                      Tu navegador no soporta el formato de video.
+                    </video>
+                    <label for="demo-enfrendados" class="btn-cerrar-demo" title="Volver a la imagen">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                      <span>Volver a la foto</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="proyecto-body">
+                  <h4 class="proyecto-titulo">Juego Enfrendados</h4>
+                  <p class="proyecto-desc">
+                    Enfrendados es un juego de dados para dos jugadores donde intervienen el azar, la toma de decisiones y las destrezas matemáticas. El objetivo principal es sumar la mayor cantidad de puntos a lo largo de un total de tres rondas o lograr una victoria automática al vaciar por completo la reserva propia de dados.
+                  </p>
+
+                  <div class="proyecto-rol-box">
+                    <strong>Mi Rol:</strong> Desarrollador / Colaborador
+                  </div>
+
+                  <div class="proyecto-tags">
+                    <span class="badge-pill">C#</span>
+                    <span class="badge-pill">Consola</span>
+                    <span class="badge-pill">Lógica de Juego</span>
+                    <span class="badge-pill">Algoritmos</span>
+                  </div>
+
+                  <div class="proyecto-footer">
+                    <!-- Botón para alternar Ver demo / Volver a foto -->
+                    <label for="demo-enfrendados" class="btn btn-demo-action" title="Alternar video demostrativo">
+                      <svg class="btn-icon icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                      <svg class="btn-icon icon-close" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                      <span class="label-text-ver">Ver demo</span>
+                      <span class="label-text-ocultar">Volver a la foto</span>
+                    </label>
+
+                    <a href="https://github.com/enzosanderr/Enfrendados-juego-consola" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                      <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5A10 10 0 0 0 12 2z"/>
+                      </svg>
+                      Ver en GitHub
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <!-- OTROS PROYECTOS -->
+          <div>
+            <h3 class="proyectos-subheading">
+              <span class="texto-acento-2">◈</span> Otros Proyectos
+            </h3>
+
+            <div class="otros-proyectos-grid">
+
+              <!-- PROYECTO 4: Página Web Xtreme Suplementos -->
+              <article class="proyecto-card-standard">
+                <!-- Checkbox de control para alternar demo / foto -->
+                <input type="checkbox" id="demo-xtreme" class="demo-toggle" aria-label="Mostrar u ocultar video de demostración para Xtreme Suplementos">
+
+                <div class="proyecto-media-box">
+                  <!-- 1. Capa de Imagen (se muestra primero) -->
+                  <div class="media-view-image">
+                    <img src="img/xtreme-suplementos.png" alt="Captura de pantalla de la página web Xtreme Suplementos" class="proyecto-img" loading="lazy">
+                    <label for="demo-xtreme" class="btn-demo-overlay" title="Ver video demostrativo de Xtreme Suplementos">
+                      <svg class="demo-play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                      <span>Ver demo</span>
+                    </label>
+                  </div>
+
+                  <!-- 2. Capa de Video (se muestra al presionar 'Ver demo') -->
+                  <div class="media-view-video">
+                    <video controls preload="metadata" class="proyecto-video" aria-label="Demostración en video de la página web Xtreme Suplementos">
+                      <source src="video/video-xtreme-suplementos.mp4" type="video/mp4">
+                      Tu navegador no soporta el formato de video.
+                    </video>
+                    <label for="demo-xtreme" class="btn-cerrar-demo" title="Volver a la imagen">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                      <span>Volver a la foto</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="proyecto-body">
+                  <h4 class="proyecto-titulo">Página Web Xtreme Suplementos</h4>
+                  <p class="proyecto-desc">
+                    Página web creada para una tienda de suplementos como trabajo integrador de la diplomatura en programación web fullstack de la UTN FRRo. Utilizando principalmente PHP con MySQL como base de datos y HTML, CSS y JS para la maquetación web.
+                  </p>
+
+                  <div class="proyecto-rol-box">
+                    <strong>Mi Rol:</strong> Desarrollador
+                  </div>
+
+                  <div class="proyecto-tags">
+                    <span class="badge-pill">PHP</span>
+                    <span class="badge-pill">MySQL</span>
+                    <span class="badge-pill">HTML5</span>
+                    <span class="badge-pill">CSS3</span>
+                    <span class="badge-pill">JavaScript</span>
+                  </div>
+
+                  <div class="proyecto-footer">
+                    <!-- Botón para alternar Ver demo / Volver a foto -->
+                    <label for="demo-xtreme" class="btn btn-demo-action" title="Alternar video demostrativo">
+                      <svg class="btn-icon icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                      <svg class="btn-icon icon-close" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                      <span class="label-text-ver">Ver demo</span>
+                      <span class="label-text-ocultar">Volver a la foto</span>
+                    </label>
+
+                    <a href="https://github.com/enzosanderr" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                      <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5A10 10 0 0 0 12 2z"/>
+                      </svg>
+                      Ver en GitHub
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         6. REDES SOCIALES Y CONTACTO PROFESIONAL (#redes)
+         (Íconos grandes SVG inline sin librerías JS, abrir en nueva pestaña)
+         ======================================================================== -->
+    <section id="redes" class="seccion social-section">
+      <div class="contenedor">
+
+        <header class="seccion-header">
+          <span class="seccion-subtitulo">&lt;Conexiones&gt;</span>
+          <h2 class="seccion-titulo">Mis <span class="texto-acento-1">Redes</span></h2>
+          <p class="seccion-descripcion">
+            Canales de comunicación directa y repositorios donde comparto código y actividad.
+          </p>
+        </header>
+
+        <div class="redes-grid">
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/enzo-sander/" target="_blank" rel="noopener noreferrer" class="red-card red-card-linkedin" aria-label="Perfil de LinkedIn de Enzo Sander">
+            <div class="red-icon-wrapper">
+              <svg class="red-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 1 0 0-3.28 1.64 1.64 0 0 0 0 3.28m1.4 9.74V9.93H5.06v8.57h2.8z"/>
+              </svg>
+            </div>
+            <h3 class="red-titulo">LinkedIn</h3>
+            <p class="red-usuario">in/enzo-sander</p>
+            <span class="red-link-arrow">
+              Conectar 
+              <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </span>
+          </a>
+
+          <!-- GitHub -->
+          <a href="https://github.com/enzosanderr" target="_blank" rel="noopener noreferrer" class="red-card red-card-github" aria-label="Perfil de GitHub de Enzo Sander">
+            <div class="red-icon-wrapper">
+              <svg class="red-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5A10 10 0 0 0 12 2z"/>
+              </svg>
+            </div>
+            <h3 class="red-titulo">GitHub</h3>
+            <p class="red-usuario">@enzosanderr</p>
+            <span class="red-link-arrow">
+              Ver Repositorios 
+              <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </span>
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:enzosanderr@gmail.com" class="red-card red-card-email" aria-label="Enviar correo electrónico a Enzo Sander">
+            <div class="red-icon-wrapper">
+              <svg class="red-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+            </div>
+            <h3 class="red-titulo">Email</h3>
+            <p class="red-usuario">enzosanderr@gmail.com</p>
+            <span class="red-link-arrow">
+              Escribir Correo 
+              <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </span>
+          </a>
+
+          <!-- WhatsApp (El número no se escribe visiblemente en el sitio; el enlace usa el placeholder NUMERO) -->
+          <a href="https://wa.me/NUMERO" target="_blank" rel="noopener noreferrer" class="red-card red-card-whatsapp" aria-label="Contactar a Enzo Sander por WhatsApp">
+            <div class="red-icon-wrapper">
+              <svg class="red-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24M8.53 7.33c-.16 0-.35.06-.53.27-.18.2-.7.69-.7 1.67 0 .99.72 1.94.82 2.08.1.13 1.41 2.15 3.42 3.01.48.21.85.33 1.15.43.48.15.93.13 1.28.08.39-.06 1.2-.49 1.37-.97.17-.47.17-.88.12-.97-.05-.08-.2-.14-.42-.25-.22-.11-1.3-.64-1.5-.72-.2-.07-.35-.11-.5.11-.15.22-.59.72-.72.87-.13.15-.27.17-.49.06-.22-.11-.94-.35-1.78-1.1-.66-.59-1.1-1.32-1.23-1.54-.13-.22-.01-.34.1-.45.1-.1.22-.27.33-.4.11-.14.15-.23.22-.38.07-.16.04-.3-.02-.41-.06-.11-.53-1.28-.73-1.75-.19-.46-.39-.4-.53-.4z"/>
+              </svg>
+            </div>
+            <h3 class="red-titulo">WhatsApp</h3>
+            <p class="red-usuario">Mensaje Directo</p>
+            <span class="red-link-arrow">
+              Iniciar Chat 
+              <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </span>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         7. FORMULARIO DE CONTACTO (#contacto)
+         (Envío sin JS mediante Formspree con validación nativa HTML5)
+         NOTA: Reemplazar TU_ID por el ID provisto por Formspree (ej: f/mzbqoprk)
+         ======================================================================== -->
+    <section id="contacto" class="seccion contact-section">
+      <div class="contenedor contacto-container">
+
+        <header class="seccion-header">
+          <span class="seccion-subtitulo">&lt;Hablemos&gt;</span>
+          <h2 class="seccion-titulo">Enviame un <span class="texto-acento-2">Mensaje</span></h2>
+          <p class="seccion-descripcion">
+            ¿Tenés alguna propuesta, proyecto o consulta? Completá el formulario y te responderé a la brevedad.
+          </p>
+        </header>
+
+        <div class="contacto-card">
+          <!-- Formulario Formspree: Reemplazar 'TU_ID' con tu ID de Formspree -->
+          <form action="https://formspree.io/f/TU_ID" method="POST" class="contacto-form">
+            
+            <div class="form-group-row">
+              <!-- Campo: Nombre -->
+              <div class="form-group">
+                <label for="nombre" class="form-label">
+                  Nombre completo <span class="form-label-required">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="nombre" 
+                  name="nombre" 
+                  class="form-input" 
+                  placeholder="Ej: Juan Pérez" 
+                  required
+                  autocomplete="name">
+              </div>
+
+              <!-- Campo: Email -->
+              <div class="form-group">
+                <label for="email" class="form-label">
+                  Correo electrónico <span class="form-label-required">*</span>
+                </label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  class="form-input" 
+                  placeholder="Ej: tuemail@dominio.com" 
+                  required
+                  autocomplete="email">
+              </div>
+            </div>
+
+            <!-- Campo: Asunto -->
+            <div class="form-group">
+              <label for="asunto" class="form-label">
+                Asunto <span class="form-label-required">*</span>
+              </label>
+              <input 
+                type="text" 
+                id="asunto" 
+                name="asunto" 
+                class="form-input" 
+                placeholder="Ej: Propuesta de proyecto / Consulta laboral" 
+                required>
+            </div>
+
+            <!-- Campo: Mensaje -->
+            <div class="form-group">
+              <label for="mensaje" class="form-label">
+                Mensaje <span class="form-label-required">*</span>
+              </label>
+              <textarea 
+                id="mensaje" 
+                name="mensaje" 
+                rows="5" 
+                class="form-textarea" 
+                placeholder="Escribe tu mensaje detallado aquí..." 
+                required></textarea>
+            </div>
+
+            <!-- Botón de envío estilizado -->
+            <button type="submit" class="btn btn-primary btn-submit">
+              <span>Enviar Mensaje</span>
+              <svg class="btn-icon" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/>
+              </svg>
+            </button>
+
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="contenedor footer-content">
+      <div class="footer-logo">
+        <span class="texto-acento-1">&lt;ES /&gt;</span> Enzo Sander
+      </div>
+
+      <div class="footer-copy">
+        &copy; 2026 Enzo Sander. Todos los derechos reservados.
+      </div>
+
+      <div class="footer-tech-detail">
+        <span class="footer-dot"></span>
+        <span>HTML5 &amp; CSS3 Puro · Dark Tech Minimalista</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script mínimo opcional: Auto-reproduce el video al presionar 'Ver demo' y lo pausa al cerrarlo -->
+  <script>
+    document.querySelectorAll('.demo-toggle').forEach(function(toggle) {
+      toggle.addEventListener('change', function(e) {
+        var card = e.target.closest('article');
+        if (!card) return;
+        var video = card.querySelector('video');
+        if (!video) return;
+        if (e.target.checked) {
+          video.play().catch(function() {});
+        } else {
+          video.pause();
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
